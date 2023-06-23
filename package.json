@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
-    "build": "echo 'No build steps required'",
+    "build": "npm run build",
+    "build1": "echo 'No build steps required'",
     "server": "node server/server.js"
   },
   "keywords": [],
