@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server/server.js",
     "client": "cd client && cross-env PORT=3001 react-scripts start",
-    "server": "cd server && nodemon server.js"
+    "server": "cd server && nodemon server.js",
+    "build": "echo 'No build steps required'"
   },
   "keywords": [],
   "author": "",
