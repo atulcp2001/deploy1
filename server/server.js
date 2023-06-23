@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const port=3000;
+const adjectives = ['an awesome', 'a caring', 'a helping', 'a selfless', 'a trustworthy', 'a fearless', 'an honest', 'a dependable', 'a friendly', 'a charming']
 
 // Use the cors middleware
 app.use(cors());
@@ -19,9 +20,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/whoami', (req, res) => {
-  console.log('Received request from client');
-  console.log('Custom header:', req.headers['Custom-Header']);
-  res.json({ message: 'You are awesome!' });
+  const randomNumber = Math.floor(Math.random() * adjectives.length);
+  res.json({ message: `You are ${adjectives[randomNumber]} person!` });
 });
 
 // Start the server
