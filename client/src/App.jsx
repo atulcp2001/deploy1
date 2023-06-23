@@ -7,9 +7,9 @@ const App = () => {
     try {
         // console.log('fetchData called'); // Add this line
         const response = await fetch('https://deploybe-mze8.onrender.com/api/whoami', {
-          headers: {
-          'Custom-Header': 'Custom Value',
-        },
+        //   headers: {
+        //   'Custom-Header': 'Custom Value',
+        // },
       });
       if (!response.ok) {
         throw new Error(response.statusText);
