@@ -5,8 +5,8 @@ const App = () => {
 
   const fetchData = async () => {
     try {
-        console.log('fetchData called'); // Add this line
-        const response = await fetch('http://localhost:3000/api/whoami', {
+        // console.log('fetchData called'); // Add this line
+        const response = await fetch('https://deploybe-mze8.onrender.com/api/whoami', {
           headers: {
           'Custom-Header': 'Custom Value',
         },
@@ -15,7 +15,7 @@ const App = () => {
         throw new Error(response.statusText);
       }
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       setMessage(data.message);
     } catch (error) {
       console.error(error);
